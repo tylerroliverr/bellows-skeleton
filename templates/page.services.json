@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "services_fwfpCD": {
+      "type": "services",
+      "name": "Services Details",
+      "settings": {
+        "heading": "Our Services",
+        "subheading": "Bellows began as a single pro lab in Miami and, in just a few short years, has grown into a small constellation of studios—Miami, Chicago and pop-ups in Atlanta and Orlando—processing thousands of rolls every month.",
+        "services-paragraph-1": "The recipe hasn’t changed: fresh chemistry mixed daily, scanners tuned by hand, and a crew of film nerds who still get goose-bumps when a perfect negative hits the light table. From one-hour C-41 to exhibition-grade drum scans, Bellows exists to bridge the gap between analogue craft and a digital-first world, giving photographers a place where curiosity is met with real expertise.",
+        "services-paragraph-2": "At Bellows, we’re on a mission to keep film photography alive and thriving in South Florida. We believe in the magic of the process—from loading film to developing and holding the final product in your hands. Our goal is to offer exceptional film development services while cultivating a space where photographers can express their creativity, share their passion, and celebrate the art of analog.",
+        "servicesimage": "shopify://shop_images/220b88c84e0e65f6ef6e56be0e09c976ddce823a.png"
+      }
+    },
+    "service_jehEyF": {
+      "type": "service",
+      "name": "Type of Service",
+      "settings": {}
+    }
+  },
+  "order": [
+    "services_fwfpCD",
+    "service_jehEyF"
+  ]
+}

@@ -1,0 +1,47 @@
+{{ 'services.css' | asset_url | stylesheet_tag }}
+
+<div id="film-development">
+  <h3>{{ section.settings.heading }}</h3>
+  <p>{{ section.settings.paragraph }}</p>
+  {{ section.settings.notes }}
+  <p>TABLES HERE????</p>
+  <a href="{{ section.settings.cta }}">{{ section.settings.button }}</a>
+</div>
+
+{% schema %}
+{
+  "name": "servicetype",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Service Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Service Text"
+    },
+    {
+      "type": "richtext",
+      "id": "notes",
+      "label": "Service Notes"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Call to Action Name"
+    },
+    {
+      "type": "url",
+      "id": "cta",
+      "label": "Call to Action"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Type of Service"
+    }
+  ]
+}
+{% endschema %}
