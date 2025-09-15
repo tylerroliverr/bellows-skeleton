@@ -1,6 +1,6 @@
 {{ 'services.css' | asset_url | stylesheet_tag }}
 
-<div id="film-development">
+<div id="{{ section.settings.anchor_id }}">
   <h3>{{ section.settings.heading }}</h3>
   <p>{{ section.settings.paragraph }}</p>
   {{ section.settings.notes }}
@@ -12,6 +12,11 @@
 {
   "name": "servicetype",
   "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID (no spaces use '-')"
+    },
     {
       "type": "text",
       "id": "heading",
