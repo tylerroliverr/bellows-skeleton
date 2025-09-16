@@ -1,0 +1,15 @@
+.footer-div {
+  background-color: #FFF750;
+  height: 580px;
+  position: relative;
+  z-index: 9999;
+}
+
+.footer-logo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  padding: 15px;
+}

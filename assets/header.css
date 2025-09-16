@@ -1,5 +1,14 @@
 /* These were just styles for me so I could visually set the menu up */
 
+.logo {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  z-index: 9999;
+  padding: 15px;
+}
+
 /* Menu button */
 .menu-toggle {
   font-size: 2rem;
@@ -14,6 +23,7 @@
   color: white;
 }
 
+/* Cart buttons */
 .cart-button {
   position: fixed;
   bottom: 1rem;
@@ -23,6 +33,18 @@
   z-index: 999;
   mix-blend-mode: difference;
   color: white;
+}
+
+.cart-bubble {
+  position: relative;
+  background-color: white;
+  padding: 1px 8px;
+  border-radius: 100%;
+  font-size: 20px;
+}
+
+.cart-number {
+  color: black;
 }
 
 /* Fullscreen overlay */
@@ -67,4 +89,19 @@
 .menu-nav {
   margin-left: 1rem;
   margin-top: 0.5rem;
+}
+
+/* Social links */
+.header-social-links {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 999;
+}
+
+.header-social-links a {
+  text-decoration: underline;
 }

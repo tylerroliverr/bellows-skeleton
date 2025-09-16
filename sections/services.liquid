@@ -4,7 +4,9 @@
   <h2>{{ section.settings.heading }}</h2>
   <nav class="services-nav">
     {% for block in section.blocks %}
-      <a href="#{{ block.settings.anchor_id }}">{{ block.settings.link_text }}</a>
+      <div class="button">
+        <a href="#{{ block.settings.anchor_id }}">{{ block.settings.link_text }}</a>
+      </div>
     {% endfor %}
   </nav>
   <h3>{{ section.settings.subheading }}</h3>
@@ -14,7 +16,7 @@
     src="{{ section.settings.servicesimage |image_url }}"
     width="auto"
     height="auto"
-    class=""
+    class="service-hero-image"
   >
 </section>
 

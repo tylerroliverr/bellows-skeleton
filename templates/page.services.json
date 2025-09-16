@@ -105,7 +105,8 @@
         "paragraph": "Virtual-drum mounting means zero Newton rings and up to 6300 dpi without wet mounting. Perfect for gallery editions or photobooks. Files arrive as untouched 3F raws or colour-graded TIFFs—your choice.",
         "notes": "<ul><li>Notes:<br/>Max file size: ~200 MB per frame.</li><li>Dust removal pass and 48-bit output available.</li><li>Price: $35 per frame (discounts 10+).</li></ul>",
         "button": "Reserve the X5",
-        "cta": "#"
+        "cta": "#",
+        "service-image-left": "shopify://shop_images/25e0511ab7990c9332dbf562d4beafd76ff7747c.png"
       }
     },
     "service_dEWPfw": {
@@ -141,7 +142,8 @@
         "paragraph": "Mini DV, VHS-C, Hi8—if it’s magnetic, we can rescue it. Footage is captured at 10-bit 4:2:2 ProRes, de-interlaced with motion-adaptive hardware, and delivered as an edit-ready MP4 or on a USB-C SSD. Time-base errors are stabilised, audio normalised, and tapes are returned (or recycled) alongside your negatives.",
         "notes": "<p>Notes:</p><ul><li>$30 per hour of footage, bulk breaks at 5+ tapes.</li><li>Optional colour pass to balance old camcorder white-balance swings.</li></ul>",
         "button": "Digitise My Tapes",
-        "cta": "#"
+        "cta": "#",
+        "service-image-right": "shopify://shop_images/892a9235931663cca2285a8a94364fea3c60a794.png"
       }
     }
   },

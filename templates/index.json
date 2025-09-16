@@ -11,7 +11,7 @@
   "sections": {
     "sendrollshome_aLTPmr": {
       "type": "sendrollshome",
-      "name": "Send Rolls Homepage",
+      "name": "Send Rolls",
       "settings": {
         "heading": "Bellows began as a single pro lab in Miami and, in just a few short years, has grown into a small constellation of studios—Miami, Chicago and pop-ups in Atlanta and Orlando—processing thousands of rolls every month.",
         "paragraph-1": "The recipe hasn’t changed: fresh chemistry mixed daily, scanners tuned by hand, and a crew of film nerds who still get goose-bumps when a perfect negative hits the light table. From one-hour C-41 to exhibition-grade drum scans, Bellows exists to bridge the gap between analogue craft and a digital-first world, giving photographers a place where curiosity is met with real expertise.",
@@ -32,19 +32,55 @@
             "button": "@blueroom",
             "cta": "https://www.instagram.com/blueroom.studios/"
           }
+        },
+        "image_7Uq47d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2f529b174b6214c2ec5f84a1e769474c31d7c7c9.png",
+            "alt": "Carousel image",
+            "button": "@testing",
+            "cta": "#"
+          }
         }
       },
       "block_order": [
-        "image_jUptyX"
+        "image_jUptyX",
+        "image_7Uq47d"
       ],
       "name": "Wall of Fame",
       "settings": {
-        "heading": "Wall Of Fame",
+        "heading": "Wall of Fame",
         "text": "Legendary frames, developed right here - updated each month."
       }
+    },
+    "imagecarousel_7H8JL3": {
+      "type": "imagecarousel",
+      "blocks": {
+        "image_GGpTiX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/a3bf6a92b61862809047a7ae287061773e9e1b01.png",
+            "alt": "Carousel image"
+          }
+        },
+        "image_KHyr8t": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/493255312d84660aace5a2cfdb2a29bbf8200074.png",
+            "alt": "Carousel image"
+          }
+        }
+      },
+      "block_order": [
+        "image_GGpTiX",
+        "image_KHyr8t"
+      ],
+      "name": "Image Carousel",
+      "settings": {}
     }
   },
   "order": [
+    "imagecarousel_7H8JL3",
     "sendrollshome_aLTPmr",
     "walloffame_AnARbN"
   ]

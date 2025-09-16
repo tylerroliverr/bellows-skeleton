@@ -1,9 +1,25 @@
-<footer>
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="footer-div">
   <div class="footer__links">
     {% for link in section.settings.menu.links %}
       {{ link.title | link_to: link.url }}
     {% endfor %}
   </div>
+  <div class="footer__links">
+    {% for link in section.settings['second-menu'].links %}
+      {{ link.title | link_to: link.url }}
+    {% endfor %}
+  </div>
+  <a href="{{ routes.root_url }}">
+    <img
+      src="{{ section.settings.logo | image_url }}"
+      alt="logo"
+      width="auto"
+      height="auto"
+      class="footer-logo"
+    >
+  </a>
 </footer>
 
 {% schema %}
@@ -16,10 +32,14 @@
       "label": "t:labels.menu"
     },
     {
-      "type": "checkbox",
-      "id": "show_payment_icons",
-      "label": "t:labels.show_payment_icons",
-      "default": true
+      "type": "link_list",
+      "id": "second-menu",
+      "label": "t:labels.menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer Logo"
     }
   ]
 }

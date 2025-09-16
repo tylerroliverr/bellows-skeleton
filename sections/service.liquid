@@ -1,11 +1,35 @@
 {{ 'services.css' | asset_url | stylesheet_tag }}
 
-<div id="{{ section.settings.anchor_id }}">
-  <h3>{{ section.settings.heading }}</h3>
-  <p>{{ section.settings.paragraph }}</p>
-  {{ section.settings.notes }}
-  <p>TABLES HERE????</p>
-  <a href="{{ section.settings.cta }}">{{ section.settings.button }}</a>
+<div id="{{ section.settings.anchor_id }}" class="service-div">
+  <div class="service-info-div">
+    <h3>{{ section.settings.heading }}</h3>
+    <p>{{ section.settings.paragraph }}</p>
+    {{ section.settings.notes }}
+    <p>TABLES HERE????</p>
+    <div class="button">
+      <a href="{{ section.settings.cta }}">{{ section.settings.button }}</a>
+    </div>
+  </div>
+  {% if section.settings['service-image-left'] != blank %}
+    <div class="service-image-div-left">
+      <img
+        src="{{ section.settings['service-image-left'] | image_url }}"
+        width="auto"
+        height="auto"
+        alt="Service Image"
+      >
+    </div>
+  {% endif %}
+  {% if section.settings['service-image-right'] != blank %}
+    <div class="service-image-div-right">
+      <img
+        src="{{ section.settings['service-image-right'] | image_url }}"
+        width="auto"
+        height="auto"
+        alt="Service Image"
+      >
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -41,6 +65,16 @@
       "type": "url",
       "id": "cta",
       "label": "Call to Action"
+    },
+    {
+      "type": "image_picker",
+      "id": "service-image-right",
+      "label": "Image right"
+    },
+    {
+      "type": "image_picker",
+      "id": "service-image-left",
+      "label": "Image left"
     }
   ],
   "presets": [
