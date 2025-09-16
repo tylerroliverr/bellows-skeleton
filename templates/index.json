@@ -20,9 +20,32 @@
         "button": "Send Us Your Rolls",
         "cta": "#"
       }
+    },
+    "walloffame_AnARbN": {
+      "type": "walloffame",
+      "blocks": {
+        "image_jUptyX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/a4818996346ca9c32b86de4b41d75d6a8702e5f8.jpg",
+            "alt": "Carousel image",
+            "button": "@blueroom",
+            "cta": "https://www.instagram.com/blueroom.studios/"
+          }
+        }
+      },
+      "block_order": [
+        "image_jUptyX"
+      ],
+      "name": "Wall of Fame",
+      "settings": {
+        "heading": "Wall Of Fame",
+        "text": "Legendary frames, developed right here - updated each month."
+      }
     }
   },
   "order": [
-    "sendrollshome_aLTPmr"
+    "sendrollshome_aLTPmr",
+    "walloffame_AnARbN"
   ]
 }
