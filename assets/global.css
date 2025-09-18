@@ -11,3 +11,10 @@ body {
 img {
   display: block;
 }
+
+a,
+a:visited {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+}

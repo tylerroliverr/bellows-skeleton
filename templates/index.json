@@ -9,6 +9,91 @@
  */
 {
   "sections": {
+    "featured_collection_wHifxE": {
+      "type": "featured-collection",
+      "blocks": {
+        "collection_EAV7rA": {
+          "type": "collection",
+          "settings": {
+            "collection": "film"
+          }
+        },
+        "collection_cxrxp8": {
+          "type": "collection",
+          "settings": {
+            "collection": "disposable-cameras"
+          }
+        },
+        "collection_GPPWN7": {
+          "type": "collection",
+          "settings": {
+            "collection": "batteries"
+          }
+        },
+        "collection_D6R9FJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "polaroid"
+          }
+        },
+        "collection_MRDebf": {
+          "type": "collection",
+          "settings": {
+            "collection": "tape"
+          }
+        },
+        "collection_cXc8M4": {
+          "type": "collection",
+          "settings": {
+            "collection": "lenses"
+          }
+        },
+        "collection_iCEf98": {
+          "type": "collection",
+          "settings": {
+            "collection": "merch"
+          }
+        }
+      },
+      "block_order": [
+        "collection_EAV7rA",
+        "collection_cxrxp8",
+        "collection_GPPWN7",
+        "collection_D6R9FJ",
+        "collection_MRDebf",
+        "collection_cXc8M4",
+        "collection_iCEf98"
+      ],
+      "name": "Featured Collection",
+      "settings": {
+        "heading": "Shop Products"
+      }
+    },
+    "imagecarousel_7H8JL3": {
+      "type": "imagecarousel",
+      "blocks": {
+        "image_GGpTiX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/a3bf6a92b61862809047a7ae287061773e9e1b01.png",
+            "alt": "Carousel image"
+          }
+        },
+        "image_KHyr8t": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/493255312d84660aace5a2cfdb2a29bbf8200074.png",
+            "alt": "Carousel image"
+          }
+        }
+      },
+      "block_order": [
+        "image_GGpTiX",
+        "image_KHyr8t"
+      ],
+      "name": "Image Carousel",
+      "settings": {}
+    },
     "sendrollshome_aLTPmr": {
       "type": "sendrollshome",
       "name": "Send Rolls",
@@ -53,35 +138,62 @@
         "text": "Legendary frames, developed right here - updated each month."
       }
     },
-    "imagecarousel_7H8JL3": {
-      "type": "imagecarousel",
+    "faq_9Lg4BU": {
+      "type": "faq",
       "blocks": {
-        "image_GGpTiX": {
-          "type": "image",
+        "faq_CFx9He": {
+          "type": "faq",
           "settings": {
-            "image": "shopify://shop_images/a3bf6a92b61862809047a7ae287061773e9e1b01.png",
-            "alt": "Carousel image"
+            "faq-heading": "",
+            "question": "What is your turnaround time?",
+            "answer": "<p>Our standard turnaround is 2-3 business days.</p>"
           }
         },
-        "image_KHyr8t": {
-          "type": "image",
+        "faq_Jh4Xqd": {
+          "type": "faq",
           "settings": {
-            "image": "shopify://shop_images/493255312d84660aace5a2cfdb2a29bbf8200074.png",
-            "alt": "Carousel image"
+            "faq-heading": "",
+            "question": "What is your turnaround time?",
+            "answer": "<p>Our standard turnaround is 2-3 business days.</p>"
+          }
+        },
+        "faq_qhpYMJ": {
+          "type": "faq",
+          "settings": {
+            "faq-heading": "",
+            "question": "What is your turnaround time?",
+            "answer": "<p>Our standard turnaround is 2-3 business days.</p>"
+          }
+        },
+        "faq_hKahmV": {
+          "type": "faq",
+          "settings": {
+            "faq-heading": "",
+            "question": "What is your turnaround time?",
+            "answer": "<p>Our standard turnaround is 2-3 business days.</p>"
           }
         }
       },
       "block_order": [
-        "image_GGpTiX",
-        "image_KHyr8t"
+        "faq_CFx9He",
+        "faq_Jh4Xqd",
+        "faq_qhpYMJ",
+        "faq_hKahmV"
       ],
-      "name": "Image Carousel",
-      "settings": {}
+      "name": "FAQ",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "show_view_all": true,
+        "view_all_link": "shopify://pages/faq",
+        "view_all_text": "View all FAQs"
+      }
     }
   },
   "order": [
+    "featured_collection_wHifxE",
     "imagecarousel_7H8JL3",
     "sendrollshome_aLTPmr",
-    "walloffame_AnARbN"
+    "walloffame_AnARbN",
+    "faq_9Lg4BU"
   ]
 }
