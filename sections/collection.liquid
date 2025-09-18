@@ -5,39 +5,53 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/collection
 {% endcomment %}
 
+{{ 'collection.css' | asset_url | stylesheet_tag }}
+
 <h1>{{ collection.title }}</h1>
+<p>Filters go here</p>
 
 <div class="collection-products">
-  {% paginate collection.products by 20 %}
-    {% for product in collection.products %}
-      <div class="collection-product">
-        {% if product.featured_image %}
-          {% render 'image',
-            class: 'collection-product__image',
-            image: product.featured_image,
-            url: product.url,
-            width: 400,
-            height: 400,
-            crop: 'center'
-          %}
-        {% endif %}
-        <div class="collection-product__content">
-          <p>{{ product.title | escape | link_to: product.url }}</p>
-          <p>{{ product.price | money }}</p>
+  {% for product in collection.products %}
+    <a href="{{ product.url }}" target="_self">
+      <div class="product-container">
+        {% assign first_image = product.media | first %}
+        {% assign second_image = product.media[1] %}
+
+        <div class="product-image-container">
+          {% if first_image %}
+            <img
+              src="{{ first_image.src | image_url }}"
+              alt="{{ product.title }}"
+              class="product-image product-image--primary"
+              width="auto"
+              height="auto"
+            >
+          {% endif %}
+
+          {% if second_image %}
+            <img
+              src="{{ second_image.src | image_url }}"
+              alt="{{ product.title }}"
+              class="product-image product-image--secondary"
+              width="auto"
+              height="auto"
+            >
+          {% endif %}
+        </div>
+        <div class="product-brand">
+          <p>metafield brand</p>
+        </div>
+        <div class="product-title">
+          {{ product.title }}
+        </div>
+        <div class="product-price">
+          {{ cart.currency.iso_code }}
+          {{ product.price | money }}
         </div>
       </div>
-    {% endfor %}
-
-    {{ paginate | default_pagination }}
-  {% endpaginate %}
+    </a>
+  {% endfor %}
 </div>
-
-{% stylesheet %}
-  .collection-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  }
-{% endstylesheet %}
 
 {% schema %}
 {
