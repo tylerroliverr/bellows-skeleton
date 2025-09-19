@@ -5,6 +5,27 @@
   justify-content: center;
 }
 
+.collection-banner-wrapper {
+  position: relative;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.collection-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: yellow;
+}
+
+.collection-banner-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 .product-image-container {
   width: 350px;
   height: 450px;

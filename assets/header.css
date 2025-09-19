@@ -32,7 +32,9 @@
   text-decoration: none;
   z-index: 999;
   mix-blend-mode: difference;
-  color: white;
+
+  color: white !important;
+  /* conflicts with "a" tag styling in globals.css */
 }
 
 .cart-bubble {

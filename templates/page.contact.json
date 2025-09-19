@@ -10,11 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "collection",
-      "settings": {
-        "collection-image-text": "SS25 BELLOWS MERCH COLLECTION",
-        "collection-image": "shopify://shop_images/ffc75e8fabe8f4999ae49012b105d20650d37a7c.png"
-      }
+      "type": "contact"
     }
   },
   "order": [

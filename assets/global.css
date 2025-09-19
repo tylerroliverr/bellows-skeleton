@@ -18,3 +18,15 @@ a:visited {
   text-decoration: none;
   cursor: pointer;
 }
+
+.product-badge {
+  background-color: #FFF750;
+  padding: 3px 10px;
+  border: black solid 1px;
+  border-radius: 15px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 11px;
+  z-index: 150;
+}

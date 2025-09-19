@@ -11,6 +11,18 @@
 <p>Filters go here</p>
 
 <div class="collection-products">
+  {% if section.settings['collection-image'] %}
+    <div class="collection-banner-wrapper">
+      <p class="collection-banner-text">{{ section.settings['collection-image-text'] }}</p>
+      <img
+        src="{{ section.settings['collection-image'] | image_url }}"
+        width="auto"
+        height="auto"
+        alt="Collection Image"
+        class="collection-banner-image"
+      >
+    </div>
+  {% endif %}
   {% for product in collection.products %}
     <a href="{{ product.url }}" target="_self">
       <div class="product-container">
@@ -18,6 +30,11 @@
         {% assign second_image = product.media[1] %}
 
         <div class="product-image-container">
+          {% if product.metafields.custom.product_badge %}
+            <div class="product-badge">
+              {{ product.metafields.custom.product_badge | metafield_tag }}
+            </div>
+          {% endif %}
           {% if first_image %}
             <img
               src="{{ first_image.src | image_url }}"
@@ -39,7 +56,7 @@
           {% endif %}
         </div>
         <div class="product-brand">
-          <p>metafield brand</p>
+          {{ product.vendor }}
         </div>
         <div class="product-title">
           {{ product.title }}
@@ -56,6 +73,18 @@
 {% schema %}
 {
   "name": "t:general.collection",
-  "settings": []
+  "settings": [
+    {
+      "type": "text",
+      "id": "collection-image-text",
+      "label": "Banner text",
+      "default": "SS25 BELLOWS MERCH COLLECTION"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection-image",
+      "label": "Collection Image Banner"
+    }
+  ]
 }
 {% endschema %}

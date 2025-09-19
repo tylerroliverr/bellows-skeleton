@@ -5,40 +5,66 @@
   https://shopify.dev/docs/storefronts/themes/architecture/templates/product
 {% endcomment %}
 
-<div class="product-images">
-  {% for image in product.images %}
-    {% render 'image', class: 'product-image', image: image %}
-  {% endfor %}
-</div>
+{{ 'product.css' | asset_url | stylesheet_tag }}
 
-<div class="product-info">
-  <h1>{{ product.title }}</h1>
-  <p>{{ product.price | money }}</p>
-  <p>{{ product.description }}</p>
-</div>
+<div class="product-page">
+  <div class="product-images-wrapper">
+    {% if product.metafields.custom.product_badge %}
+      <div class="product-badge">
+        {{ product.metafields.custom.product_badge | metafield_tag }}
+      </div>
+    {% endif %}
+    {% render 'image', class: 'product-image', image: product.featured_image %}
 
-<div class="product-form">
-  {% form 'product', product %}
-    {% assign current_variant = product.selected_or_first_available_variant %}
-
-    <select name="id">
-      {% for variant in product.variants %}
-        <option
-          value="{{ variant.id }}"
-          {% if variant == current_variant %}
-            selected="selected"
-          {% endif %}
-        >
-          {{ variant.title }} - {{ variant.price | money }}
-        </option>
+    {% comment %}
+      {% for image in product.images %}
+        {% render 'image', class: 'product-image', image: image %}
       {% endfor %}
-    </select>
+    {% endcomment %}
+  </div>
 
-    <input type="text" name="quantity" min="1" value="1">
+  <div class="product-info">
+    {{ product.vendor }}
+    <h1>{{ product.title }}</h1>
+    {{ cart.currency.iso_code }}
+    {{ product.price | money }}
+    <p>{{ product.description }}</p>
 
-    <input type="submit" value="Add to cart">
-    {{ form | payment_button }}
-  {% endform %}
+    <div class="product-form">
+      {% form 'product', product %}
+        {% if product.variants.size > 1 %}
+          <fieldset class="variant-options">
+            <legend>Select Options:</legend>
+
+            {% for variant in product.variants %}
+              <input
+                type="radio"
+                id="variant-{{ variant.id }}"
+                name="id"
+                value="{{ variant.id }}"
+                {% if forloop.first %}
+                  checked
+                {% endif %}
+                {% unless variant.available %}
+                  disabled
+                {% endunless %}
+              >
+              <label for="variant-{{ variant.id }}">
+                <span class="var-title"> {{ variant.title }} </span>
+                <span class="exp">EXP</span>
+              </label>
+            {% endfor %}
+          </fieldset>
+        {% endif %}
+
+        <input type="submit" value="Add to cart">
+
+        <input type="text" name="quantity" min="1" value="1">
+
+        {% comment %} {{ form | payment_button }} {% endcomment %}
+      {% endform %}
+    </div>
+  </div>
 </div>
 
 {% schema %}

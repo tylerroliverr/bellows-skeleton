@@ -24,6 +24,11 @@
           {% assign second_image = product.media[1] %}
 
           <div class="product-image-container">
+            {% if product.metafields.custom.product_badge %}
+              <div class="product-badge">
+                {{ product.metafields.custom.product_badge | metafield_tag }}
+              </div>
+            {% endif %}
             {% if first_image %}
               <img
                 src="{{ first_image.src | image_url }}"
@@ -45,7 +50,7 @@
             {% endif %}
           </div>
           <div class="product-brand">
-            <p>metafield brand</p>
+            {{ product.vendor }}
           </div>
           <div class="product-title">
             {{ product.title }}

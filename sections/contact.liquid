@@ -1,0 +1,38 @@
+{{ 'contact.css' | asset_url | stylesheet_tag }}
+
+<section>
+  <h2>{{ section.settings.heading }}</h2>
+  <nav class="contact-nav">
+    {% for block in section.blocks %}
+      <div class="button">
+        <a href="#{{ block.id }}">{{ block.settings.heading }}</a>
+      </div>
+    {% endfor %}
+  </nav>
+  <div class="contact-blurb">
+    {{ section.settings.paragraph }}
+  </div>
+  {% for block in section.blocks %}
+    <div id="{{ block.id }}" class="faq-heading">
+      <h2>{{ block.settings.heading }}</h2>
+    </div>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get in touch"
+    },
+    {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Contact blurb"
+    }
+  ]
+}
+{% endschema %}
