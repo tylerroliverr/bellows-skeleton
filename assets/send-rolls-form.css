@@ -1,3 +1,4 @@
+/* these two styles are for positioning the summary box */
 .film-service {
   position: relative;
 }
@@ -26,12 +27,22 @@
   gap: 10px;
 }
 
+/* styling for the help icon */
 .help-image {
   width: 50px;
   height: auto;
 }
 
+.help-text-wrapper {
+  display: flex;
+}
+
 .help-text-div {
   display: flex;
   flex-direction: column;
+}
+
+/* literally just for the scan image (this is the actual image) */
+.help-image-scanner {
+  width: 100%;
 }

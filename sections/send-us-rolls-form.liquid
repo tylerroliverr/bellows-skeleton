@@ -46,29 +46,33 @@
             </label>
           {% endif %}
         {% endfor %}
-        <div>
+        <!-- Accordion -->
+        <div class="accordion">
           {{ section.settings.help_label_service }}
-          {% for block in section.blocks %}
-            {% if block.type == 'service' %}
-              <div class="help-div">
-                {% if block.settings.help_image %}
-                  <span>
-                    <img
-                      src="{{ block.settings.help_image  | image_url }}"
-                      width="auto"
-                      height="auto"
-                      alt="Help Image"
-                      class="help-image"
-                    >
-                  </span>
-                {% endif %}
-                <div class="help-text-div">
-                  <p>{{- block.settings.help_subtitle }}</p>
-                  <p>{{- block.settings.help_text }}</p>
+          <div class="accordion-items-wrapper">
+            {{ section.settings.help_sub_label_service }}
+            {% for block in section.blocks %}
+              {% if block.type == 'service' %}
+                <div class="help-div">
+                  {% if block.settings.help_image %}
+                    <span>
+                      <img
+                        src="{{ block.settings.help_image  | image_url }}"
+                        width="auto"
+                        height="auto"
+                        alt="Help Image"
+                        class="help-image"
+                      >
+                    </span>
+                  {% endif %}
+                  <div class="help-text-div">
+                    <p>{{- block.settings.help_subtitle }}</p>
+                    <p>{{- block.settings.help_text }}</p>
+                  </div>
                 </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </fieldset>
 
@@ -90,29 +94,33 @@
             </label>
           {% endif %}
         {% endfor %}
-        <div>
+        <!-- Accordion -->
+        <div class="accordion">
           {{ section.settings.help_label_format }}
-          {% for block in section.blocks %}
-            {% if block.type == 'film_format' %}
-              <div class="help-div">
-                {% if block.settings.help_image %}
-                  <span>
-                    <img
-                      src="{{ block.settings.help_image  | image_url }}"
-                      width="auto"
-                      height="auto"
-                      alt="Help Image"
-                      class="help-image"
-                    >
-                  </span>
-                {% endif %}
-                <div class="help-text-div">
-                  <p>{{- block.settings.help_subtitle }}</p>
-                  <p>{{- block.settings.help_text }}</p>
+          <div class="accordion-items-wrapper">
+            {{ section.settings.help_sub_label_format }}
+            {% for block in section.blocks %}
+              {% if block.type == 'film_format' %}
+                <div class="help-div">
+                  {% if block.settings.help_image %}
+                    <span>
+                      <img
+                        src="{{ block.settings.help_image  | image_url }}"
+                        width="auto"
+                        height="auto"
+                        alt="Help Image"
+                        class="help-image"
+                      >
+                    </span>
+                  {% endif %}
+                  <div class="help-text-div">
+                    <p>{{- block.settings.help_subtitle }}</p>
+                    <p>{{- block.settings.help_text }}</p>
+                  </div>
                 </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </fieldset>
 
@@ -134,29 +142,33 @@
             </label>
           {% endif %}
         {% endfor %}
-        <div>
+        <!-- Accordion -->
+        <div class="accordion">
           {{ section.settings.help_label_process }}
-          {% for block in section.blocks %}
-            {% if block.type == 'process_option' %}
-              <div class="help-div">
-                {% if block.settings.help_image %}
-                  <span>
-                    <img
-                      src="{{ block.settings.help_image  | image_url }}"
-                      width="auto"
-                      height="auto"
-                      alt="Help Image"
-                      class="help-image"
-                    >
-                  </span>
-                {% endif %}
-                <div class="help-text-div">
-                  <p>{{- block.settings.help_subtitle }}</p>
-                  <p>{{- block.settings.help_text }}</p>
+          <div class="accordion-items-wrapper">
+            {{ section.settings.help_sub_label_process }}
+            {% for block in section.blocks %}
+              {% if block.type == 'process_option' %}
+                <div class="help-div">
+                  {% if block.settings.help_image %}
+                    <span>
+                      <img
+                        src="{{ block.settings.help_image  | image_url }}"
+                        width="auto"
+                        height="auto"
+                        alt="Help Image"
+                        class="help-image"
+                      >
+                    </span>
+                  {% endif %}
+                  <div class="help-text-div">
+                    <p>{{- block.settings.help_subtitle }}</p>
+                    <p>{{- block.settings.help_text }}</p>
+                  </div>
                 </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </fieldset>
 
@@ -184,29 +196,39 @@
             </label>
           {% endif %}
         {% endfor %}
-        <div>
+        <!-- Accordion -->
+        <div class="accordion">
           {{ section.settings.help_label_scanner }}
-          {% for block in section.blocks %}
-            {% if block.type == 'scanner' %}
-              {% if block.settings.help_image %}
-                <div class="help-div-scanner">
-                  <span>
-                    <img
-                      src="{{ block.settings.help_image  | image_url }}"
-                      width="auto"
-                      height="auto"
-                      alt="Help Image"
-                      class="help-image-scanner"
-                    >
-                  </span>
-                </div>
+          <div class="accordion-items-wrapper">
+            {{ section.settings.help_sub_label_scanning }}
+            {% for block in section.blocks %}
+              {% if block.type == 'scanner' %}
+                {% if block.settings.help_image %}
+                  <div class="help-div-scanner">
+                    <span>
+                      <img
+                        src="{{ block.settings.help_image  | image_url }}"
+                        width="auto"
+                        height="auto"
+                        alt="Help Image"
+                        class="help-image-scanner"
+                      >
+                    </span>
+                  </div>
+                {% endif %}
               {% endif %}
-              <div class="help-text-div">
-                <p>{{- block.settings.help_subtitle }}</p>
-                {{ block.settings.help_text }}
-              </div>
-            {% endif %}
-          {% endfor %}
+            {% endfor %}
+            <div class="help-text-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'scanner' %}
+                  <div class="help-text-div">
+                    <p>{{- block.settings.help_subtitle }}</p>
+                    {{ block.settings.help_text }}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </fieldset>
 
@@ -228,29 +250,33 @@
             </label>
           {% endif %}
         {% endfor %}
-        <div>
+        <!-- Accordion -->
+        <div class="accordion">
           {{ section.settings.help_label_resolution }}
-          {% for block in section.blocks %}
-            {% if block.type == 'resolution' %}
-              <div class="help-div">
-                {% if block.settings.help_image %}
-                  <span>
-                    <img
-                      src="{{ block.settings.help_image  | image_url }}"
-                      width="auto"
-                      height="auto"
-                      alt="Help Image"
-                      class="help-image"
-                    >
-                  </span>
-                {% endif %}
-                <div class="help-text-div">
-                  <p>{{- block.settings.help_subtitle }}</p>
-                  <p>{{- block.settings.help_text }}</p>
+          <div class="accordion-items-wrapper">
+            {{ section.settings.help_sub_label_resolution }}
+            {% for block in section.blocks %}
+              {% if block.type == 'resolution' %}
+                <div class="help-div">
+                  {% if block.settings.help_image %}
+                    <span>
+                      <img
+                        src="{{ block.settings.help_image  | image_url }}"
+                        width="auto"
+                        height="auto"
+                        alt="Help Image"
+                        class="help-image"
+                      >
+                    </span>
+                  {% endif %}
+                  <div class="help-text-div">
+                    <p>{{- block.settings.help_subtitle }}</p>
+                    <p>{{- block.settings.help_text }}</p>
+                  </div>
                 </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </fieldset>
 
@@ -272,29 +298,33 @@
             </label>
           {% endif %}
         {% endfor %}
-        <div>
+        <!-- Accordion -->
+        <div class="accordion">
           {{ section.settings.help_label_printing }}
-          {% for block in section.blocks %}
-            {% if block.type == 'printing' %}
-              <div class="help-div">
-                {% if block.settings.help_image %}
-                  <span>
-                    <img
-                      src="{{ block.settings.help_image  | image_url }}"
-                      width="auto"
-                      height="auto"
-                      alt="Help Image"
-                      class="help-image"
-                    >
-                  </span>
-                {% endif %}
-                <div class="help-text-div">
-                  <p>{{- block.settings.help_subtitle }}</p>
-                  <p>{{- block.settings.help_text }}</p>
+          <div class="accordion-items-wrapper">
+            {{ section.settings.help_sub_label_printing }}
+            {% for block in section.blocks %}
+              {% if block.type == 'printing' %}
+                <div class="help-div">
+                  {% if block.settings.help_image %}
+                    <span>
+                      <img
+                        src="{{ block.settings.help_image  | image_url }}"
+                        width="auto"
+                        height="auto"
+                        alt="Help Image"
+                        class="help-image"
+                      >
+                    </span>
+                  {% endif %}
+                  <div class="help-text-div">
+                    <p>{{- block.settings.help_subtitle }}</p>
+                    <p>{{- block.settings.help_text }}</p>
+                  </div>
                 </div>
-              </div>
-            {% endif %}
-          {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </fieldset>
 
@@ -559,6 +589,11 @@
     },
     {
       "type": "text",
+      "id": "help_sub_label_service",
+      "label": "Help subtitle for service"
+    },
+    {
+      "type": "text",
       "id": "format_label",
       "label": "Film Format Label",
       "default": "Film Format"
@@ -570,6 +605,11 @@
     },
     {
       "type": "text",
+      "id": "help_sub_label_format",
+      "label": "Help subtitle for format"
+    },
+    {
+      "type": "text",
       "id": "process_label",
       "label": "Process Label",
       "default": "Process"
@@ -578,6 +618,11 @@
       "type": "text",
       "id": "help_label_process",
       "label": "Help title for process"
+    },
+    {
+      "type": "text",
+      "id": "help_sub_label_process",
+      "label": "Help subtitle for process"
     },
     {
       "type": "text",
@@ -598,6 +643,11 @@
     },
     {
       "type": "text",
+      "id": "help_sub_label_scanning",
+      "label": "Help subtitle for scanning"
+    },
+    {
+      "type": "text",
       "id": "resolution_label",
       "label": "Resolution Label",
       "default": "Resolution"
@@ -609,6 +659,11 @@
     },
     {
       "type": "text",
+      "id": "help_sub_label_resolution",
+      "label": "Help subtitle for resolution"
+    },
+    {
+      "type": "text",
       "id": "printing_label",
       "label": "Printing Label",
       "default": "Printing"
@@ -617,6 +672,11 @@
       "type": "text",
       "id": "help_label_printing",
       "label": "Help title for printing"
+    },
+    {
+      "type": "text",
+      "id": "help_sub_label_printing",
+      "label": "Help subtitle for printing"
     },
     {
       "type": "text",

@@ -12,6 +12,10 @@ img {
   display: block;
 }
 
+ol, ul {
+  padding-inline-start: 30px;
+}
+
 a,
 a:visited {
   color: #111;
